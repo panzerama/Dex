@@ -6,7 +6,7 @@ import CreateFlashcardSet from "./components/create-flashcardset.component";
 import EditFlashcardSet from "./components/edit-flashcardset.component";
 import FlashcardSetList from "./components/flashcardset-list.component";
 
-import logo from "./logo.png";
+import dex_Icon from "./dex_Icon.svg";
 
 class App extends Component {
   render() {
@@ -15,9 +15,9 @@ class App extends Component {
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
-              <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
+              <img src={dex_Icon} width="100" height="300" alt="CodingTheSmartWay.com" />
             </a>
-            <Link to="/" className="navbar-brand">MERN-Stack FlashcardSet App</Link>
+            <Link to="/" className="navbar-brand">Dex The Study App</Link>
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
