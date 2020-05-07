@@ -1,3 +1,6 @@
+#Authors: Group C
+##Andrew Boyer, Brandan Owens, Raymond Wu, Poul Nichols, Sherrod Ware
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
