@@ -6,6 +6,7 @@ import "./App.css";
 import CreateFlashcardSet from "./components/create-flashcardset.component";
 import EditFlashcardSet from "./components/edit-flashcardset.component";
 import FlashcardSetList from "./components/flashcardset-list.component";
+import SearchPage from "./components/search.component";
 
 import dex_Icon from "./dexIcon.png";
 
@@ -37,6 +38,7 @@ class App extends Component {
           <Route path="/" exact component={FlashcardSetList} />
           <Route path="/edit/:id" component={EditFlashcardSet} />
           <Route path="/create" component={CreateFlashcardSet} />
+          <Route path ="/search" component={SearchPage}/>
         </div>
         <div className="landing_page_body">
         <div className="landing_page_icon">
