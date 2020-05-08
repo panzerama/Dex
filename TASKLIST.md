@@ -7,7 +7,7 @@
 ### Search Page
     FlashCardResults Body
     FlashCardResults Sidebar (filter)
-    Search Terms Title
+    Search Terms Title -- Ray & Poul 5/8
     List too long navigation
 ### Browse Page
     Sidebar/Filter
@@ -16,7 +16,7 @@
     List too long navigation
 ### Create Page
     CreateCard Body
-    CreateCardForm
+    CreateCardForm -- Andrew & Brandan 5/8
     CreateCardImageHandler
     CreateCardButton
     Visibility
