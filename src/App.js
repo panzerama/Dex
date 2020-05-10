@@ -19,7 +19,7 @@ class App extends Component {
       <Router>
         <NavBar> </NavBar>
         <br/>
-                <Route path="" exact component={LandingPage} />
+                <Route path="/" exact component={LandingPage} />
                 <Route path="/list" exact component={FlashcardSetList} />
                 <Route path="/edit/:id" component={EditFlashcardSet} />
                 <Route path="/create" component={CreateFlashcardSet} />
