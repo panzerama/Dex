@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -12,7 +12,6 @@ import FlashcardSetList from "./components/flashcardset-list.component";
 import SignIn from "./components/signup.component";
 import SignUp from "./components/signup.component";
 
-import dex_Icon from "./dexIcon.png";
 
 class App extends Component {
   render() {
