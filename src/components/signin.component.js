@@ -14,6 +14,7 @@ export default class SignIn extends Component {
         return (
             <div>
                 <h3>SignIn Page</h3>
+                <button>Sign In With Google</button>
             </div>
         )
     }
