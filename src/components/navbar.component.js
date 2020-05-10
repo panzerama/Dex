@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 //import logo from './logo.png';
-import { ReactComponent as Logo } from './img/dexIcon.svg';
+import { ReactComponent as Logo } from './img/dexOwl.svg';
 
 export default class Navbar extends Component {
     render (){
