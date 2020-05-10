@@ -11,14 +11,13 @@ export default class Navbar extends Component {
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" target="_blank">
-                    <Logo width="170" height="105" alt="" />
-                    
+                        <Link to="/" className="nav-link">
+                            <Logo width="170" height="105" alt="" />
+                        </Link>
                     </a>
                     
                     <div className="collpase navbar-collapse">
-                    
-                        <ul className="navbar-nav mr-auto">
-                            
+                        <ul className="navbar-nav mr-auto">                        
                             <li className="navbar-item">
                             <Link to="/search" className="nav-link">Search</Link>
                             </li>
@@ -33,9 +32,7 @@ export default class Navbar extends Component {
                             </li>
                             <li className="navbar-item">
                             <Link to="/create" className="nav-link">Sign In</Link>
-                            </li>
-
-                            
+                            </li>                         
                         </ul>
                     </div>
                 </nav>
