@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export default class LandingPage extends Component {
     render() {
         return (
-            <div className="landingPage-about">
+            <div className="container landingPage-text">
                 <h3 className="landingPage-title">Landing Page</h3>
                 <Link class="landing-page-logo" to="/">
                     <Logo width="200px" height="300px" alt="owl icon" />
