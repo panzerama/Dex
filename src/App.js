@@ -12,20 +12,20 @@ import FlashcardSetList from "./components/flashcardset-list.component";
 import SignIn from "./components/signup.component";
 import SignUp from "./components/signup.component";
 
-
+import dex_Icon from "./dexIcon.png";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <NavBar></NavBar>
-          <br/>
-          <Route path="" exact component={LandingPage} />
-          <Route path="/list" exact component={FlashcardSetList} />
-          <Route path="/edit/:id" component={EditFlashcardSet} />
-          <Route path="/create" component={CreateFlashcardSet} />
-          <Route path="/signup" component={SignUp} />
-          <Route path="/signin" component={SignIn} />
+        <br/>
+                <Route path="" exact component={LandingPage} />
+                <Route path="/list" exact component={FlashcardSetList} />
+                <Route path="/edit/:id" component={EditFlashcardSet} />
+                <Route path="/create" component={CreateFlashcardSet} />
+                <Route path="/signup" component={SignUp} />
+                <Route path="/signin" component={SignIn} />
       </Router>
     );
   }
