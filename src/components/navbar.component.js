@@ -11,7 +11,7 @@ export default class Navbar extends Component {
                 <nav className="navbar">
                     <div className="navbar-logo"> 
                         <Link to="/">
-                            <Logo />
+                            <Logo width="20%" height="%22"/>
                         </Link>     
                     </div>
                     <div className="navbar-list">   
