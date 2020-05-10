@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-//import logo from './logo.png';
+//import stylings
+
+
+//import logo;
 import { ReactComponent as Logo } from './img/dexOwl.svg';
 
 export default class Navbar extends Component {
@@ -10,7 +13,7 @@ export default class Navbar extends Component {
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <Link class="navbar-brand" to="/">
-                    <Logo width="170" height="105" alt="owl icon" />
+                    <Logo width="65%" height="80%" alt="owl icon" />
                     </Link>
                     <Link to="/" className="navbar-brand">Dex</Link>
                     <div className="collpase navbar-collapse">

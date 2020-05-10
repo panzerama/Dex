@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
+import { ReactComponent as Logo } from './img/dexOwl.svg';
+import { Link } from 'react-router-dom';
+
+ 
 
 
 export default class LandingPage extends Component {
-/*
-    render() {
-        return <div />;
-    }
-}
-*/
     render() {
         return (
-            <div className="landingPage-text">
-                <h3>Landing Page</h3>
-                <p>Curabitur eu odio pulvinar, tempus ante eu, tincidunt augue. Aenean pulvinar tincidunt massa at ultrices. Sed sit amet mauris eu lorem lacinia cursus. 
-                    Mauris orci magna, ornare sit amet turpis tempus, efficitur blandit mauris. Praesent lacus lectus, suscipit ut finibus vitae, fermentum in purus. 
-                    Quisque in nulla sed tortor consequat tristique. Pellentesque vitae varius dolor. Pellentesque luctus lacinia sodales. Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. Morbi eget fermentum velit, at laoreet nisl. Integer scelerisque convallis aliquam. Vivamus sed aliquam ex, eu ullamcorper diam.
+            <div className="landingPage-about">
+                <h3 className="landingPage-title">Landing Page</h3>
+                <Link class="landing-page-logo" to="/">
+                    <Logo width="200px" height="300px" alt="owl icon" />
+                </Link>
+                <p className="landingPage-about-text">
+                    Remember when you had hundreds of boxes of different flashcards? Well maybe you don't but you definitely are familiar with flashcards.
+                    Well Dex is here to bring it all back. It's never been easier to create, manage and share your decks with your classmates and colleagues.
+                    Upload a diagram, chart or image to your flashcards for a more immerisive feel. Search user created decks for a subject you need a crash course in.
+                    All of it availble here at Dex. The Study App.
                 </p>
             </div>
         )
