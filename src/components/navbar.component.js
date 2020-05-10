@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 //import logo from './logo.png';
-import { ReactComponent as Logo } from './logo.svg';
+import { ReactComponent as Logo } from './img/dexIcon.svg';
 
 export default class Navbar extends Component {
     render (){
         return (
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" target="_blank">
-                    <Logo width="170" height="105" alt="" />
-                    </a>
+                    <Link class="navbar-brand" to="/">
+                    <Logo width="170" height="105" alt="owl icon" />
+                    </Link>
                     <Link to="/" className="navbar-brand">Dex</Link>
                     <div className="collpase navbar-collapse">
                         <ul className="navbar-nav mr-auto">

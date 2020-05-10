@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import logo from './logo.svg';
 
 
 export default class LandingPage extends Component {
