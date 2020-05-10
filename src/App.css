@@ -1,16 +1,46 @@
 .container {
   background-color: #03CC83;
   text-emphasis-color: #0F3B1C;
+  border: 3px solid green;
 }
+
+.navbar {
+  background-color: #03CC83;
+  margin: auto;
+  width: 80%;
+  border: 3px solid green;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+
+.navbar-logo {
+  text-emphasis-color: #0F3B1C;
+  margin: left;
+  width: 10%;
+  border: 3px solid green;
+}
+
+.navbar-list {
+  text-emphasis-color: #0F3B1C;
+  border: 3px solid green;
+}
+
+.navbar-signin {
+  text-emphasis-color: #0F3B1C;
+  border: 3px solid green;
+}
+
+.navbar-button {
+  background-color: rgb(3, 180, 115);
+} 
 
 .landing_page_body {
   background-color: darkgray;
+}
 
-}
-.navbar-brand {
-  width: 100px;
-  height: 100px;
-}
 .landing_page_icon {
   float: left;
 }
