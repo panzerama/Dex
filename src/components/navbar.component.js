@@ -9,29 +9,42 @@ export default class Navbar extends Component {
     render (){
         return (
                 <nav className="navbar">
-                    <div className="navbar-logo"> 
-                        <Link to="/">
-                            <Logo width="20%" height="%22"/>
-                        </Link>     
-                    </div>
-                    <div className="navbar-list">   
-                        <button type="button" className="navbar-button">  
-                            <Link to="/search" className="nav-link">Search</Link>
-                        </button>
-                        <button type="button" className="navbar-button">
-                            <Link to="/" className="nav-link">Browse</Link>
-                        </button>
-                        <button type="button" className="navbar-button">
-                            <Link to="/create" className="nav-link">Create</Link>
-                        </button>
+                        <div className="navbar-logo"> 
+                                <Logo />
+                        </div>
+                    <div className="navbar-list">  
+                        <Link to="/" className="nav-link">
+                            <button type="button" className="navbar-button">  
+                                Home
+                            </button>
+                        </Link> 
+                        <Link to="/search" className="nav-link" >
+                            <button type="button" className="navbar-button">  
+                                Search
+                            </button>
+                        </Link>
+                        <Link to="/" className="nav-link">
+                            <button type="button" className="navbar-button">
+                                Browse
+                            </button>
+                        </Link>
+                        <Link to="/create" className="nav-link">
+                            <button type="button" className="navbar-button">
+                                Create
+                            </button>
+                        </Link>
                     </div>
                     <div className="navbar-signin">  
-                        <button type="button" className="navbar-button">
-                            <Link to="/create" className="nav-link">Sign Up</Link>
-                        </button>
-                        <button type="button" className="navbar-button">
-                            <Link to="/create" className="nav-link">Sign In</Link>
-                        </button>    
+                        <Link to="/create" className="nav-link">
+                            <button type="button" className="navbar-button">
+                                Sign Up
+                            </button>
+                        </Link>
+                        <Link to="/create" className="nav-link">
+                            <button type="button" className="navbar-button">
+                                Sign In
+                            </button>   
+                        </Link> 
                     </div>
                 </nav>
         )

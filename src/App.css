@@ -8,34 +8,38 @@
   background-color: #03CC83;
   margin: auto;
   width: 80%;
+  height: 70px;
   border: 3px solid green;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  
+  list-style-type: none;
 }
 
 .navbar-logo {
-  text-emphasis-color: #0F3B1C;
-  margin: left;
-  width: 10%;
-  border: 3px solid green;
+  float: left;
+  width: 35px;
 }
 
 .navbar-list {
-  text-emphasis-color: #0F3B1C;
-  border: 3px solid green;
+  float: left;
+  text-decoration: none;
 }
 
 .navbar-signin {
-  text-emphasis-color: #0F3B1C;
-  border: 3px solid green;
+  float: right;
 }
 
 .navbar-button {
   background-color: rgb(3, 180, 115);
+  height: 64px;
+  color: black;
 } 
+
+.navbar-button a:hover {
+  background-color: #111;
+}
+
+.navbar-button a:active {
+  background-color: blue;
+}
 
 .landing_page_body {
   background-color: darkgray;
