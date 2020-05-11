@@ -2551,7 +2551,7 @@
 		background-color: #03CC83;
 		border-radius: 0;
 		border: 0;
-		color: black!important;
+		color: blue!important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 600;
@@ -2568,15 +2568,16 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: darkgreen;
+			background-color: yellow; 
 		}
+
 
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: black;
+			background-color: yellowgreen; 
 		}
 
 		input[type="submit"].icon,

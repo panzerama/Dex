@@ -3,33 +3,73 @@
   border: 3px solid green;
 }
 
-.navbar {
+/* Entire navbar component */
+.navbar-container {
   background-color: #03CC83;
   margin: auto;
   width: 80%;
-  height: 70px;
+  height: 80px;
   border: 3px solid green;
+  overflow: hidden;
 }
 
-.navbar-logo {
+/* Contains only the logo */
+.navbar-logo-container {
   float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
   width: 35px;
+  display: block;
 }
 
-.navbar-list {
+/* Contains all left-aligned navbar buttons */
+.navbar-list-container {
   float: left;
+  display: block;
 }
 
-.navbar-signin {
-  float: right;
-}
 
 .navbar-button {
-  height: 64px;
+  color: black!important;
+  height: 80px;
+  padding: 15px 32px;
 } 
 
+.navbar-button:active {
+  background-color: forestgreen; 
+}
+
+.navbar-button:hover {
+  background-color: darkgreen; 
+}
+
+/* Contains search input and button */
+.navbar-search-container {
+  float: right;
+  width: 20%;
+}
+
+.navbar-search-container input[type=text] {
+  margin-top: 8px;
+  font-size: 17px;
+  border: 2px solid green;
+}
+
+.navbar-search-container button {
+  background: green;
+  cursor: pointer;
+  color: black;
+}
+
+/* Contains all user profile interactions */
+.navbar-user-container {
+  display: inline-block;
+}
+
+/* I have no idea what this is */
 .landing_page_body {
-  background-color: darkgray;
+  background-color: blue;
 }
 
 .landing_page_icon {
