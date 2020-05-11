@@ -14,34 +14,34 @@ export default class Navbar extends Component {
                         </div>
                     <div className="navbar-list">  
                         <Link to="/" className="nav-link">
-                            <button type="button" className="navbar-button">  
+                            <button type="button" className="button">  
                                 Home
                             </button>
                         </Link> 
                         <Link to="/search" className="nav-link" >
-                            <button type="button" className="navbar-button">  
+                            <button type="button" className="button">  
                                 Search
                             </button>
                         </Link>
-                        <Link to="/" className="nav-link">
-                            <button type="button" className="navbar-button">
+                        <Link to="/browse" className="nav-link">
+                            <button type="button" className="button">
                                 Browse
                             </button>
                         </Link>
                         <Link to="/create" className="nav-link">
-                            <button type="button" className="navbar-button">
+                            <button type="button" className="button">
                                 Create
                             </button>
                         </Link>
                     </div>
                     <div className="navbar-signin">  
-                        <Link to="/create" className="nav-link">
-                            <button type="button" className="navbar-button">
+                        <Link to="/signup" className="nav-link">
+                            <button type="button" className="button">
                                 Sign Up
                             </button>
                         </Link>
-                        <Link to="/create" className="nav-link">
-                            <button type="button" className="navbar-button">
+                        <Link to="/signin" className="nav-link">
+                            <button type="button" className="button">
                                 Sign In
                             </button>   
                         </Link> 

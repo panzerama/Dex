@@ -1,6 +1,5 @@
 .container {
   background-color: #03CC83;
-  text-emphasis-color: #0F3B1C;
   border: 3px solid green;
 }
 
@@ -10,7 +9,6 @@
   width: 80%;
   height: 70px;
   border: 3px solid green;
-  list-style-type: none;
 }
 
 .navbar-logo {
@@ -20,7 +18,6 @@
 
 .navbar-list {
   float: left;
-  text-decoration: none;
 }
 
 .navbar-signin {
@@ -28,18 +25,8 @@
 }
 
 .navbar-button {
-  background-color: rgb(3, 180, 115);
   height: 64px;
-  color: black;
 } 
-
-.navbar-button a:hover {
-  background-color: #111;
-}
-
-.navbar-button a:active {
-  background-color: blue;
-}
 
 .landing_page_body {
   background-color: darkgray;
