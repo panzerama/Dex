@@ -1,7 +1,7 @@
 # This is our master task list. Do not edit without group approval.
 
 ## To be finished.
-### Landing Page
+### Landing Page -- Brandan & Andrew 5/8
     About Section
     Large Scroll Icon
 ### Search Page
@@ -16,7 +16,7 @@
     List too long navigation
 ### Create Page
     CreateCard Body
-    CreateCardForm -- Andrew & Brandan 5/8
+    CreateCardForm
     CreateCardImageHandler
     CreateCardButton
     Visibility
@@ -44,6 +44,6 @@
     Edit Decks
         [Update All Properties, Delete, Share]
 ### NavBar/Footer
-    Position Indicator
+    Position Indicator --Brandan & Andrew 5/8
     Search Icon and TextField onClick
 ## Components finished.
