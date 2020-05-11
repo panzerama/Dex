@@ -65,7 +65,24 @@ flashcardSetRoutes.route('/add').post(function(req, res) {
         });
 });
 
-app.use('/flashcardSet', flashcardSetRoutes);
+//Search function
+//Use MongoDB in operator to query data
+//flashcardSetRoutes.route('/search/:search').post(function(req, res){
+flashcardSetRoutes.route('/search').get(function(req, res){
+    //let search = req.params.searchValue;
+    
+    //FlashcardSet.find({searchValue, function(err,flashcardSet){
+      FlashcardSet.find({flashcardSet_title: "Math", function(err,flashcardSet){  
+        if(err) {
+            console.log("401 - unable to retrieve search result");
+        }else{
+            res.json(result);
+        }
+    }})
+        
+});
+    
+
 
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
