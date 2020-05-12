@@ -14,27 +14,50 @@
 
 
 /* Style the navigation bar */
+
+
+
 .navbar {
   width: 100%;
-  background-color: darkgreen;
+  background-color: #029a63;
   overflow: hidden;
-  padding: 0px 10%;
-  height: 70px;
+  height: 80px;
+  padding-left: 10%;
+  padding-right: 10%;
+  border: 2px solid purple;
 }
 
-/* Logo */
+/* Navbar Containers */
 .navbar-brand {
-  float: left;
+  position: absolute;
+  left: 10%;
+  height: 80px;
   width: 15%;
   margin-left: 5px;
   margin-right: 5px;
-  border: 2px solid green;
+  border: 1px solid orange;
+  overflow: hidden;
 }
 
-.navbar-nav {
-  color: transparent;
-  width: 35%;
-  
+.navbar-left {
+  position: absolute;
+  left: 25%;
+  width: 20%;
+  border: 1px solid blue;
+}
+
+.navbar-form {
+  position: absolute;
+  left:45%;
+  width: 20%;
+  border: 1px solid red;
+}
+
+.navbar-right {
+  position: absolute;
+  right: 10%;
+  width: 15%;
+  border: 1px solid purple;
 }
 
 
@@ -45,31 +68,26 @@
   color: black;
   text-decoration: none;
   font-size: 20px;
-  width: 130px;
-  height: 70px;
-  
+  height: 80px;
+  border: 1px solid yellow;
 }
 
-.navbar .nav-link {
-  padding-top: 15%;
-  padding-bottom: 15%;
-  
-}
 
+/* Navbar Middle content */
 .navbar .navbar-submit {
   font-size: 14px;
   margin-top: 15px;
   height: 40px;
-  width: 8%;
+  width: 25%;
   border: 1px solid black;
   padding-top: 8px;
-  background: green;
+  background: #03e593;
 }
 
 .navbar .navbar-text {
   margin-top: 15px;
   height: 40px;
-  width: 15%;
+  width: 75%;
   border: 1px solid black;
   padding-left: 5px;
 }
@@ -79,10 +97,6 @@
   background-color: forestgreen;
 }
 
-/* Current/active navbar link */
-.active ul li{
-  color: black;
-}
 
 .navbar ul {
   float: left;
@@ -96,17 +110,8 @@
   
 }
 
-
-.navbar-text {
-  color: black;
-}
-
-.navbar-submit {
-  color: black;
-}
-
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .navbar a {
     float: none;
     display: block;

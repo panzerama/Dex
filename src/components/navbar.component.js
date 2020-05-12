@@ -9,25 +9,32 @@ export default class Navbar extends Component {
     render (){
                     return (
             <nav class="navbar">
-                <a class="navbar-brand" href="#"><Logo /></a>
+                <div class="navbar-brand" href="#"><Logo /></div>
 
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                <ul class="navbar-left">
+                    <li class="nav-item">
+                        <a class="nav-left" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Create</a>
+                        <a class="nav-left" href="/create">Create</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Browse</a>
+                        <a class="nav-left" href="/browse">Browse</a>
                     </li>
                     
                 </ul>
                 <form class="navbar-form">
-                <a class="navbar-submit" >Search</a>
                     <input class="navbar-text" placeholder="Search" />
-                    
+                    <a class="navbar-submit" >Search</a>
                 </form>
+                <ul class="navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-right" href="/signup">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-right" href="/signin">Login</a>
+                    </li>
+                </ul>
 
                 
             </nav>
