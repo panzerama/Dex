@@ -1,73 +1,9 @@
+/* I have no idea what this stuff is for */
 .container {
   background-color: #03CC83;
   border: 3px solid green;
 }
 
-/* Entire navbar component */
-.navbar-container {
-  background-color: #03CC83;
-  margin: auto;
-  width: 80%;
-  height: 80px;
-  border: 3px solid green;
-  overflow: hidden;
-}
-
-/* Contains only the logo */
-.navbar-logo-container {
-  float: left;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 5px;
-  width: 35px;
-  display: block;
-}
-
-/* Contains all left-aligned navbar buttons */
-.navbar-list-container {
-  float: left;
-  display: block;
-}
-
-
-.navbar-button {
-  color: black!important;
-  height: 80px;
-  padding: 15px 32px;
-} 
-
-.navbar-button:active {
-  background-color: forestgreen; 
-}
-
-.navbar-button:hover {
-  background-color: darkgreen; 
-}
-
-/* Contains search input and button */
-.navbar-search-container {
-  float: right;
-  width: 20%;
-}
-
-.navbar-search-container input[type=text] {
-  margin-top: 8px;
-  font-size: 17px;
-  border: 2px solid green;
-}
-
-.navbar-search-container button {
-  background: green;
-  cursor: pointer;
-  color: black;
-}
-
-/* Contains all user profile interactions */
-.navbar-user-container {
-  display: inline-block;
-}
-
-/* I have no idea what this is */
 .landing_page_body {
   background-color: blue;
 }
@@ -75,3 +11,75 @@
 .landing_page_icon {
   float: left;
 }
+
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: darkgreen;
+  overflow: auto;
+  padding: 0px 10%;
+}
+
+/* Logo */
+.navbar-brand {
+  float: left;
+  width: 15%;
+  height: 70px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 2px solid green;
+}
+
+.navbar-nav {
+  color: transparent;
+}
+
+/* Navbar links */
+.navbar a {
+  text-align: center;
+  padding: 8px 10px;
+  margin: 8px 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: forestgreen;
+}
+
+/* Current/active navbar link */
+.active ul li{
+  color: black;
+}
+
+.navbar ul {
+  float: left;
+  text-decoration: none;
+}
+
+.navbar li {
+  float: left;
+  text-decoration: none;
+  width: 100px;
+}
+
+.navbar-text {
+  color: black;
+}
+
+.navbar-submit {
+  color: black;
+}
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+/* Everything below is imported code that I'm slowly removing what is unneeded */
