@@ -64,7 +64,7 @@ flashcardSetRoutes.route('/add').post(function(req, res) {
             res.status(400).send('adding new flashcardSet failed');
         });
 });
-
+/*
 //Search function
 //Use MongoDB in operator to query data
 //flashcardSetRoutes.route('/search/:search').post(function(req, res){
@@ -81,6 +81,7 @@ flashcardSetRoutes.route('/search').get(function(req, res){
     }})
         
 });
+*/
     
 
 
