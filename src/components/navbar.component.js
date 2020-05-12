@@ -9,24 +9,27 @@ export default class Navbar extends Component {
     render (){
                     return (
             <nav class="navbar">
-            <a class="navbar-brand" href="#"><Logo /></a>
+                <a class="navbar-brand" href="#"><Logo /></a>
 
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Create</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Browse</a>
                     </li>
                     
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
                 </ul>
                 <form class="navbar-form">
+                <a class="navbar-submit" >Search</a>
                     <input class="navbar-text" placeholder="Search" />
-                    <button class="navbar-submit" >Search</button>
+                    
                 </form>
+
+                
             </nav>
 
             /* Dropdown Code 

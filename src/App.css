@@ -17,15 +17,15 @@
 .navbar {
   width: 100%;
   background-color: darkgreen;
-  overflow: auto;
+  overflow: hidden;
   padding: 0px 10%;
+  height: 70px;
 }
 
 /* Logo */
 .navbar-brand {
   float: left;
   width: 15%;
-  height: 70px;
   margin-left: 5px;
   margin-right: 5px;
   border: 2px solid green;
@@ -33,16 +33,45 @@
 
 .navbar-nav {
   color: transparent;
+  width: 35%;
+  
 }
+
 
 /* Navbar links */
 .navbar a {
+  float: left;
   text-align: center;
-  padding: 8px 10px;
-  margin: 8px 10px;
   color: black;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  width: 130px;
+  height: 70px;
+  
+}
+
+.navbar .nav-link {
+  padding-top: 15%;
+  padding-bottom: 15%;
+  
+}
+
+.navbar .navbar-submit {
+  font-size: 14px;
+  margin-top: 15px;
+  height: 40px;
+  width: 8%;
+  border: 1px solid black;
+  padding-top: 8px;
+  background: green;
+}
+
+.navbar .navbar-text {
+  margin-top: 15px;
+  height: 40px;
+  width: 15%;
+  border: 1px solid black;
+  padding-left: 5px;
 }
 
 /* Navbar links on mouse-over */
@@ -57,14 +86,16 @@
 
 .navbar ul {
   float: left;
-  text-decoration: none;
+  list-style: none;
 }
 
 .navbar li {
   float: left;
-  text-decoration: none;
-  width: 100px;
+  list-style: none;
+  width: 33%;
+  
 }
+
 
 .navbar-text {
   color: black;
@@ -73,6 +104,7 @@
 .navbar-submit {
   color: black;
 }
+
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
 @media screen and (max-width: 500px) {
   .navbar a {
