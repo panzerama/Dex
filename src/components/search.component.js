@@ -37,7 +37,7 @@ onSubmit(e) {
     console.log(`Search Value:') ${this.state.search_value}`);
     var search_value = this.state.search_value;
 
-    axios.post('http://localhost:4000/search', search_value)
+    axios.get('http://localhost:4000/search')
         .then(res => console.log(res.data));
 
 

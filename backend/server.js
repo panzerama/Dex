@@ -35,6 +35,25 @@ flashcardSetRoutes.route('/:id').get(function(req, res) {
     });
 });
 
+
+//search function
+flashcardSetRoutes.get('/search', function(req, res){
+    res.send("Hello World")
+})
+
+
+
+//test
+flashcardSetRoutes.route('/api/flashcardsets', cors(), (req, res) => {
+    var query = req.params.query;
+    FlashcardSet.find({'request' : query}, function(err, result)
+        {if (err) throw err;
+            if (result) {
+                res.json(result)
+            } else ( res.send(JSON.stringify({error: 'Error'})))})
+        .select({flashcardSet_title});  //chose which fields you want
+    })
+
 flashcardSetRoutes.route('/update/:id').post(function(req, res) {
     FlashcardSet.findById(req.params.id, function(err, flashcardSet) {
         if (!flashcardSet)
@@ -44,7 +63,6 @@ flashcardSetRoutes.route('/update/:id').post(function(req, res) {
             flashcardSet.flashcardSet_author = req.body.flashcardSet_author;
             flashcardSet.flashcardSet_description = req.body.flashcardSet_description;
             flashcardSet.flashcardSet_category = req.body.flashcardset_category;
-
             flashcardSet.save().then(flashcardSet => {
                 res.json('FlashcardSet updated!');
             })
@@ -65,24 +83,9 @@ flashcardSetRoutes.route('/add').post(function(req, res) {
         });
 });
 
-//Search function
-//Use MongoDB in operator to query data
-//flashcardSetRoutes.route('/search/:search').post(function(req, res){
-flashcardSetRoutes.route('/search').get(function(req, res){
-    //let search = req.params.searchValue;
-    
-    //FlashcardSet.find({searchValue, function(err,flashcardSet){
-      FlashcardSet.find({flashcardSet_title: "Math", function(err,flashcardSet){  
-        if(err) {
-            console.log("401 - unable to retrieve search result");
-        }else{
-            res.json(result);
-        }
-    }})
-        
-});
-    
 
+
+app.use('/flashcardSet', flashcardSetRoutes);
 
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
