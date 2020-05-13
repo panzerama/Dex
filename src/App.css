@@ -1,46 +1,128 @@
+/* I have no idea what this stuff is for */
 .container {
   background-color: #03CC83;
-  text-emphasis-color: #0F3B1C;
   border: 3px solid green;
 }
-
-.navbar {
-  background-color: #03CC83;
-  margin: auto;
-  width: 80%;
-  border: 3px solid green;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  
-}
-
-.navbar-logo {
-  text-emphasis-color: #0F3B1C;
-  margin: left;
-  width: 10%;
-  border: 3px solid green;
-}
-
-.navbar-list {
-  text-emphasis-color: #0F3B1C;
-  border: 3px solid green;
-}
-
-.navbar-signin {
-  text-emphasis-color: #0F3B1C;
-  border: 3px solid green;
-}
-
-.navbar-button {
-  background-color: rgb(3, 180, 115);
-} 
 
 .landing_page_body {
-  background-color: darkgray;
+  background-color: blue;
 }
 
 .landing_page_icon {
   float: left;
 }
+
+
+/* Style the navigation bar */
+
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  width: 100%;
+  background-color: #029a63;
+  overflow: hidden;
+  height: 80px;
+  padding-left: 10%;
+  padding-right: 10%;
+  border: 2px solid purple;
+}
+
+/* Navbar Containers */
+.navbar-brand {
+  position: absolute;
+  left: 10%;
+  height: 80px;
+  width: 15%;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid orange;
+  overflow: hidden;
+}
+
+.navbar-left {
+  position: absolute;
+  left: 25%;
+  width: 20%;
+  border: 1px solid blue;
+}
+
+.navbar-form {
+  position: absolute;
+  left:45%;
+  width: 20%;
+  border: 1px solid red;
+}
+
+.navbar-right {
+  position: absolute;
+  right: 10%;
+  width: 15%;
+  border: 1px solid purple;
+}
+
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  height: 80px;
+  border: 1px solid yellow;
+}
+
+
+/* Navbar Middle content */
+.navbar .navbar-submit {
+  font-size: 14px;
+  margin-top: 15px;
+  height: 40px;
+  width: 25%;
+  border: 1px solid black;
+  padding-top: 8px;
+  background: #03e593;
+  
+}
+
+.navbar .navbar-text {
+  margin-top: 15px;
+  height: 40px;
+  width: 75%;
+  border: 1px solid black;
+  padding-left: 5px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: forestgreen;
+}
+
+
+.navbar ul {
+  float: left;
+  list-style: none;
+}
+
+.navbar li {
+  float: left;
+  list-style: none;
+  width: 33%;
+  
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 800px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+/* Everything below is imported code that I'm slowly removing what is unneeded */
