@@ -8,36 +8,29 @@ import { ReactComponent as Logo } from './img/dexOwl.svg';
 export default class Navbar extends Component {
     render (){
                     return (
-            <nav class="navbar">
-                <div class="navbar-brand" href="#"><Logo /></div>
+            <div class="nav-container">     
+                <div class="navbar-brand" href="/">
+                <Logo class="logo" />
+                </div>
+                <nav class="navbar">    
+                    <ul class="navbar-left">
+                            <a class="nav-left" href="/">Home</a>
+                            <a class="nav-left" href="/create">Create</a>
+                            <a class="nav-left" href="/list">Browse</a>
+                    </ul>
 
-                <ul class="navbar-left">
-                    <li class="nav-item">
-                        <a class="nav-left" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-left" href="/create">Create</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-left" href="/list">Browse</a>
-                    </li>
-                    
-                </ul>
-                <form class="navbar-form">
-                    <input class="navbar-text" placeholder="Search" />
-                    <a class="navbar-submit" >Search</a>
-                </form>
-                <ul class="navbar-right">
-                    <li class="nav-item">
-                        <a class="nav-right" href="/signup">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-right" href="/signin">Login</a>
-                    </li>
-                </ul>
+                    <form class="navbar-form">
+                        <input class="navbar-text" placeholder="Search" />
+                        <a class="navbar-submit" >Search</a>
+                    </form>
 
-                
-            </nav>
+                    <ul class="navbar-right">
+                            <a class="nav-right" href="/signup">Sign Up</a>
+                            <a class="nav-right" href="/signin">Login</a>
+                    </ul>
+                </nav>
+            </div> 
+            
 
             /* Dropdown Code 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
