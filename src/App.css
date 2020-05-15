@@ -29,7 +29,7 @@
       display: flex;
       height: 100px;
       overflow: hidden;
-      background-color: #028153;
+      background-color: #03cc83;
       padding: 0 10%;
     }
 
@@ -81,7 +81,7 @@
     /* Navbar Form */
     .navbar-submit {
       border: 1px solid black;
-      background: #03e593;
+      background: #026843;
       display: flex;
       flex-grow: 3;
       height: 50px;
