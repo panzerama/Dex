@@ -1,15 +1,25 @@
 /* I have no idea what this stuff is for */
-.container {
+.container-landing {
   background-color: #03CC83;
   border: 3px solid green;
 }
 
-.landing_page_body {
-  background-color: blue;
+.title {
+  background-color: #03cc83;
+  color:#014f33;
+  text-align: center;
 }
 
-.landing_page_icon {
+.icon {
   float: left;
+  width: 50px;
+  height: 100px;
+  padding: 0 5%;
+}
+
+.body-text {
+  padding: 5%;
+  color: #014f33;
 }
 
 /* Navigation Bar */

@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom';
 export default class LandingPage extends Component {
     render() {
         return (
-            <div class="container \32 5\25" id="landing-page-container">
-                <h3 class="title" id="landing-page-title">Landing Page</h3>
-                    <Link class="" to="/">
-                    <Logo class="image left" id="landing-page-logo" alt="owl icon" />
+            <div class="container-landing">
+                <h3 class="title" >Landing Page</h3>
+                    <Link class="icon" to="/">
+                    <Logo class="icon" id="landing-page-logo" alt="owl icon" />
                     </Link>
                     <p class="body-text" id="landing-page-text">
                     Remember when you had hundreds of boxes of different flashcards? Well maybe you don't but you definitely are familiar with flashcards.
