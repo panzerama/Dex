@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import{Link} from 'react-router-dom';
-import { render } from '@testing-library/react';
-
-
-//create the flashcard table
-
+import SearchResult from './searchResult.component'
 
 //perform search with mongoDB by taking the search value submitted by the user
 export default class SearchPage extends Component{
@@ -34,14 +29,19 @@ onSubmit(e) {
     e.preventDefault();
 
     console.log('Search value submitted');
-    console.log(`Search Value:') ${this.state.search_value}`);
+    
+    console.log(`Search Value:${this.state.search_value}`);
     var search_value = this.state.search_value;
-
-    axios.get('http://localhost:4000/search')
-        .then(res => console.log(res.data));
-
-
-
+    console.log('search_value' + search_value)
+    
+    axios.get('http://localhost:4000/flashcardSet/')
+        .then(response => {
+            this.setState({ flashcardSet: response.data });
+            console.log(response.data);
+        })
+        .catch(function (error){
+            console.log(error);
+        })
 }
 
 onChangeFlashcardSetCategory(e) {
@@ -49,6 +49,7 @@ onChangeFlashcardSetCategory(e) {
         flashcardSet_category: e.target.value
     });
 }
+
 
 
 render(){
@@ -92,26 +93,9 @@ render(){
                             <label className="form-check-label">Author</label>
                         </div>
                         <div>
-                            <h3>
-                                Search Result:
-                            </h3>
-                    <table className="table table-striped" style={{ marginTop: 20 }} >
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Author</th>
-                                <th>Description</th>
-                                <th>Category</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                        
-                            {this.state.search_value}
-                        </tbody>
-                    </table>
-                   
+                            <h3>Search Result:</h3>
+                    
+                        <SearchResult/>
                         </div>
                         
                         

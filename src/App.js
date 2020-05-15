@@ -10,6 +10,8 @@ import SearchPage from "./components/search.component";
 
 import dex_Icon from "./dexIcon.png";
 
+
+
 class App extends Component {
   render() {
     return (

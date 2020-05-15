@@ -6,6 +6,9 @@ const mongoose = require('mongoose');
 const flashcardSetRoutes = express.Router();
 const PORT = 4000;
 
+
+//var debug = require('debug')('test')
+
 let FlashcardSet = require('./flashcardSet.model');
 
 app.use(cors());
@@ -19,7 +22,8 @@ connection.once('open', function() {
 })
 
 flashcardSetRoutes.route('/').get(function(req, res) {
-    FlashcardSet.find(function(err, flashcardSet) {
+    
+    FlashcardSet.find({flashcardSet_title: "English"}, function(err, flashcardSet) {
         if (err) {
             console.log(err);
         } else {
@@ -27,6 +31,7 @@ flashcardSetRoutes.route('/').get(function(req, res) {
         }
     });
 });
+
 
 flashcardSetRoutes.route('/:id').get(function(req, res) {
     let id = req.params.id;
@@ -36,23 +41,29 @@ flashcardSetRoutes.route('/:id').get(function(req, res) {
 });
 
 
-//search function
-flashcardSetRoutes.get('/search', function(req, res){
-    res.send("Hello World")
-})
+//search page
+flashcardSetRoutes.route('/search/').get(function(req, res){
+    FlashcardSet.find({}, function(err, flashcardSet) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(flashcardSet);
+        }
+    });
+});
 
-
-
-//test
-flashcardSetRoutes.route('/api/flashcardsets', cors(), (req, res) => {
-    var query = req.params.query;
-    FlashcardSet.find({'request' : query}, function(err, result)
-        {if (err) throw err;
-            if (result) {
-                res.json(result)
-            } else ( res.send(JSON.stringify({error: 'Error'})))})
-        .select({flashcardSet_title});  //chose which fields you want
-    })
+    /*
+    //var searchValue = req.params.searchValue;
+    FlashcardSet.find({flashcardSet_title: "Math"}, function(err, flashcardSet) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(flashcardSet);
+            console.log("flashcardSet" + flashcardSet);
+        }
+    });
+});
+*/
 
 flashcardSetRoutes.route('/update/:id').post(function(req, res) {
     FlashcardSet.findById(req.params.id, function(err, flashcardSet) {
