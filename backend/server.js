@@ -28,6 +28,16 @@ flashcardSetRoutes.route('/').get(function(req, res) {
     });
 });
 
+flashcardSetRoutes.route('/list').get(function(req, res) {
+    FlashcardSet.find(function(err, flashcardSet) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(flashcardSet);
+        }
+    });
+});
+
 flashcardSetRoutes.route('/:id').get(function(req, res) {
     let id = req.params.id;
     FlashcardSet.findById(id, function(err, flashcardSet) {
