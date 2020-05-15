@@ -12,103 +12,182 @@
   float: left;
 }
 
+/* Navigation Bar */
+    /* Style the navigation bar */
 
-/* Style the navigation bar */
+    .nav-container {
+      display: flex;
+      height: 100px;
+      overflow: hidden;
+      background-color: #028153;
+      padding: 0 10%;
+    }
 
-.nav-container {
+    .navbar {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    /* Navbar Containers */
+    .logo {
+      height: 100px;
+      padding: 5px;
+    }
+
+    .navbar-left {
+      display: flex;
+        height: 100px;
+        flex-grow: 1;
+        justify-content: flex-start;
+    }
+
+    .navbar-form {
+        display: flex;
+        flex-grow: .2;
+        height: 100px;
+        align-items: center;
+    }
+
+    .navbar-right {
+        display: flex;
+        height: 100px;
+        flex-grow: .2;
+        justify-content: flex-end;
+    }
+
+
+    /* Navbar Button */
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      display: flex;
+      width: 100px;
+      flex-grow: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    /* Navbar Form */
+    .navbar-submit {
+      border: 1px solid black;
+      background: #03e593;
+      display: flex;
+      flex-grow: 3;
+      height: 50px;
+    }
+
+    .navbar-text {
+      border: 1px solid black;
+      display: flex;
+      flex-grow: 1;
+      padding-left: 5px;
+      height: 50px;
+    }
+
+    /* Navbar links on mouse-over */
+    .navbar a:hover {
+      background-color: #029a63;
+    }
+
+    .navbar a:focus {
+      background-color: #03b373;
+    }
+
+    .navbar a:active {
+      background-color: #03b373;
+    }
+
+
+    /* NavBar List Properties */
+    .navbar ul {
+      list-style: none;
+    }
+
+
+/* Create New Flashcard Set */
+
+/* Containers */
+.set-container {
+  border: 1px solid orangered;
   display: flex;
-  height: 100px;
-  overflow: hidden;
-  background-color: #028153;
-  padding: 0 10%;
+  flex-direction: column;
+  padding: 0px 10%;
+  background: #028153;
+}
+.title-container {
+  border: 1px solid greenyellow;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  background: whitesmoke;
 }
 
-.navbar {
-  /* Parent */
+.form-group {
   display: flex;
-  flex-grow: 1;
-}
-
-/* Navbar Containers */
-.logo {
-  height: 100px;
   padding: 5px;
+  border: 1px solid black;
 }
 
-.navbar-left {
-    /* Parent */
-    display: flex;
-    /* Child */
-    height: 100px;
-    flex-grow: 1;
-    justify-content: flex-start;
-}
-
-.navbar-form {
-    /* Parent */
-    display: flex;
-    /* Child */
-    flex-grow: .2;
-    height: 100px;
-    align-items: center;
-}
-
-.navbar-right {
-    /* Parent */
-    display: flex;
-    height: 100px;
-    /* Child */
-    flex-grow: .2;
-    justify-content: flex-end;
-}
-
-
-/* Navbar Button */
-.navbar a {
-  color: black;
-  text-decoration: none;
+.form-title {
   display: flex;
-  width: 100px;
   flex-grow: 0;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid black;
+  width: 15%;
 }
 
-
-/* Navbar Form */
-.navbar-submit {
-  border: 1px solid black;
-  background: #03e593;
+.form-input {
   display: flex;
-  flex-grow: 3;
-  height: 50px;
+  flex-grow: 0;
+  border: 1px solid black;
+  width: 40%;
 }
 
-.navbar-text {
+.flashcard-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #03b373;
+  margin-top: 40px;
+  margin-bottom: 40px;
   border: 1px solid black;
+}
+
+.top-flashcard {
   display: flex;
   flex-grow: 1;
-  padding-left: 5px;
-  height: 50px;
+  background: red;
+  height: 40px;
+  margin: 20px;
 }
 
-/* Navbar links on mouse-over */
-.navbar a:hover {
-  background-color: #029a63;
+.bottom-flashcard {
+  display: flex;
+  height: 300px;
 }
 
-.navbar a:focus {
-  background-color: #03b373;
+.left-flashcard {
+  display: flex;
+  margin: 20px;
+  width: 50%;
+  background-image: url(https://i.pinimg.com/originals/e1/89/13/e189135cecb98637bc67e79c5f19e3ea.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.navbar a:active {
-  background-color: #03b373;
+.right-flashcard {
+  display: flex;
+  margin: 20px;
+  width: 50%;
+  background-image: url(https://i.pinimg.com/originals/e1/89/13/e189135cecb98637bc67e79c5f19e3ea.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
+.submitBar {
+  display: flex;
+  flex-direction: row-reverse;
+  border: solid 1px black;
 
-/* NavBar List Properties */
-.navbar ul {
-  list-style: none;
+  padding: 20px;
 }
-
-

@@ -16,7 +16,7 @@ export default class Navbar extends Component {
                     <ul class="navbar-left">
                             <a class="nav-left" href="/">Home</a>
                             <a class="nav-left" href="/create">Create</a>
-                            <a class="nav-left" href="/list">Browse</a>
+                            <a class="nav-left" href="/list">List</a>
                     </ul>
 
                     <form class="navbar-form">
