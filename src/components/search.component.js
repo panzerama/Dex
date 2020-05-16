@@ -1,13 +1,27 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import SearchResult from './searchResult.component'
+import Link from 'react-dom'
+
+
+const SearchResultList = props => (
+    <tr>
+        <td>{props.searchResultList.flashcardSet_title}</td>
+        <td>{props.searchResultList.flashcardSet_author}</td>
+        <td>{props.searchResultList.flashcardSet_description}</td>
+        <td>{props.searchResultList.flashcardSet_category}</td>
+        <td>
+            <Link to={"/edit/"+props.flashcardSet._id}>Edit</Link>
+        </td>
+    </tr>
+)
 
 //perform search with mongoDB by taking the search value submitted by the user
 export default class SearchPage extends Component{
     
     constructor(props){
         super(props);
-        this.state = {flashcardSet: []};
+        this.state = {searchResultList: []};
         this.onChangeSearchValue = this.onChangeSearchValue.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.onChangeFlashcardSetCategory = this.onChangeFlashcardSetCategory.bind(this);
@@ -34,9 +48,9 @@ onSubmit(e) {
     var search_value = this.state.search_value;
     console.log('search_value' + search_value)
     
-    axios.get('http://localhost:4000/flashcardSet/')
+    axios.get('http://localhost:4000/search/')
         .then(response => {
-            this.setState({ flashcardSet: response.data });
+            this.setState({ searchResult: response.data });
             console.log(response.data);
         })
         .catch(function (error){
