@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import "../App.css";
 
+import ReactDOM from "react-dom";
+import CanvasDraw from "react-canvas-draw";
+
 export default class CreateFlashcardSet extends Component {
 
     constructor(props) {
@@ -17,7 +20,13 @@ export default class CreateFlashcardSet extends Component {
             flashcardSet_title: '',
             flashcardSet_author: '',
             flashcardSet_description: '',
-            flashcardSet_category: ''
+            flashcardSet_category: '',
+            
+            color: "#ffc600",
+            width: 476,
+            height: 260,
+            brushRadius: 10,
+            lazyRadius: 4
         }
     }
 
@@ -42,6 +51,12 @@ export default class CreateFlashcardSet extends Component {
     onChangeFlashcardSetCategory(e) {
         this.setState({
             flashcardSet_category: e.target.value
+        });
+    }
+
+    onChangeFlashcardSetFlashcard(e) {
+        this.setState({
+            flashcardSet_flaschard: e.target.value
         });
     }
 
@@ -155,35 +170,115 @@ export default class CreateFlashcardSet extends Component {
                         </div>
                     </form>
                 </div>
+                
                 <div className="flashcard-container">
-                    <div className="top-flashcard">
-                        Hello
-                    </div>
+                    <div className="tools-flashcard">
+          <button
+            onClick={() => {
+              localStorage.setItem(
+                "savedDrawing",
+                this.saveableCanvas.getSaveData()
+              );
+            }}
+          >
+            Save
+          </button>
+          <button
+            onClick={() => {
+              this.saveableCanvas.clear();
+            }}
+          >
+            Clear
+          </button>
+          <button
+            onClick={() => {
+              this.saveableCanvas.undo();
+            }}
+          >
+            Undo
+          </button>
+          <div class="toolbar-group">
+                <div class="toolbar-icon">Width:</div>
+                <input
+                class="toolbar-input"
+                    type="number"
+                    value={this.state.width}
+                    onChange={e =>
+                    this.setState({ width: parseInt(e.target.value, 10) })
+                    }
+                />
+          </div>
+          <div class="toolbar-group">
+            <div class="toolbar-icon">Height:</div>
+                <input
+                class="toolbar-input"
+                type="number"
+                value={this.state.height}
+                onChange={e =>
+                    this.setState({ height: parseInt(e.target.value, 10) })
+                }
+                />
+            </div>
+            <div class="toolbar-group">
+                <div class="toolbar-icon">Brush-Radius:</div>
+                <input
+                class="toolbar-input"
+                type="number"
+                value={this.state.brushRadius}
+                onChange={e =>
+                    this.setState({ brushRadius: parseInt(e.target.value, 10) })
+                }
+                />
+          </div>
+          <div class="toolbar-group">
+            <div class="toolbar-icon">Lazy-Radius:</div>
+                <input
+                    class="toolbar-input"
+                type="number"
+                value={this.state.lazyRadius}
+                onChange={e =>
+                    this.setState({ lazyRadius: parseInt(e.target.value, 10) })
+                }
+                />
+            </div>
+        </div>
                     <div className="bottom-flashcard">
                         <div className="left-flashcard">
-                            Hello
-                        </div>
+                            <CanvasDraw 
+                                ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
+                                brushColor={this.state.color}
+                                brushRadius={this.state.brushRadius}
+                                lazyRadius={this.state.lazyRadius}
+                                canvasWidth={this.state.width}
+                                canvasHeight={this.state.height}
+                                
+                            />                  
+                            </div>
+
                         <div className="right-flashcard">
-                            Hello
+                            <CanvasDraw
+                                disabled
+                                hideGrid
+                                
+                                canvasWidth={this.state.width}
+                                canvasHeight={this.state.height}
+                                ref={canvasDraw => (this.loadableCanvas = canvasDraw)}
+                                saveData={localStorage.getItem("savedDrawing")}
+                            />       
                         </div>
-                    </div>
-                </div>
-                <div className="flashcard-container">
-                    <div className="top-flashcard">
-                        Hello
-                    </div>
-                    <div className="bottom-flashcard">
-                        <div className="left-flashcard">
-                            Hello
-                        </div>
-                        <div className="right-flashcard">
-                            Hello
-                        </div>
+                        <button
+                                onClick={() => {
+                                this.loadableCanvas.loadSaveData(
+                                localStorage.getItem("savedDrawing")
+                                );
+                                }}        
+                            />  
                     </div>
                 </div>
                 <div className="submitBar">
-                    <input type="submit" value="Create FlashcardSet" className="btn btn-primary" />
-                </div>        
+                    <input type="submit" value="Create FlashcardSet" className="btn btn-primary"/>
+                </div> 
+
             </div>
                 
         )
