@@ -9,7 +9,7 @@ export default class Footer extends Component{
             <div class = "footer links left"></div>
                <Logo class = "footer-logo"/>
                <div class = "footer-links">
-               <footer> <strong>Links</strong> </footer>
+               <strong>Links</strong> 
                 <body>
                     <ul>
                         <li><a href ="/" Home>Home</a></li> 
@@ -18,7 +18,7 @@ export default class Footer extends Component{
                         <li><a href ="/search" Search>Search</a></li> 
                     </ul>
                 </body>
-
+                
                </div>
                </div>
                
