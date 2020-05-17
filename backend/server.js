@@ -23,7 +23,7 @@ connection.once('open', function() {
 
 flashcardSetRoutes.route('/').get(function(req, res) {
     
-    FlashcardSet.find({flashcardSet_title: "English"}, function(err, flashcardSet) {
+    FlashcardSet.find({}, function(err, flashcardSet) {
         if (err) {
             console.log(err);
         } else {
@@ -43,7 +43,8 @@ flashcardSetRoutes.route('/:id').get(function(req, res) {
 
 //search page
 flashcardSetRoutes.route('/search/').get(function(req, res){
-    FlashcardSet.find({}, function(err, flashcardSet) {
+    FlashcardSet.find({flashcardSet_title: "English"}, function(err, flashcardSet) {
+        
         if (err) {
             console.log(err);
         } else {
@@ -52,18 +53,7 @@ flashcardSetRoutes.route('/search/').get(function(req, res){
     });
 });
 
-    /*
-    //var searchValue = req.params.searchValue;
-    FlashcardSet.find({flashcardSet_title: "Math"}, function(err, flashcardSet) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.json(flashcardSet);
-            console.log("flashcardSet" + flashcardSet);
-        }
-    });
-});
-*/
+
 
 flashcardSetRoutes.route('/update/:id').post(function(req, res) {
     FlashcardSet.findById(req.params.id, function(err, flashcardSet) {

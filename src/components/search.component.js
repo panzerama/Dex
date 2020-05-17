@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import SearchResult from './searchResult.component'
-import Link from 'react-dom'
+import { Link } from 'react-router-dom';
 
 
 const SearchResultList = props => (
@@ -31,10 +30,23 @@ export default class SearchPage extends Component{
     }
 }
 
+
+componentDidMount() {
+    axios.get('http://localhost:4000/search/')
+        .then(response => {
+            this.setState({ searchResultList: response.data });
+        })
+        .catch(function (error){
+            console.log(error);
+        })
+}
+
+
 onChangeSearchValue(e) {
     this.setState({
         search_value: e.target.value
     });
+    //console.log("onchangesearchvalue()" + e.target.value)
 }
 
 
@@ -50,8 +62,8 @@ onSubmit(e) {
     
     axios.get('http://localhost:4000/search/')
         .then(response => {
-            this.setState({ searchResult: response.data });
-            console.log(response.data);
+            this.setState({ searchResultList: response.data });
+            console.log("The search Result data is " + SearchResultList);
         })
         .catch(function (error){
             console.log(error);
@@ -109,7 +121,7 @@ render(){
                         <div>
                             <h3>Search Result:</h3>
                     
-                        <SearchResult/>
+                        
                         </div>
                         
                         
