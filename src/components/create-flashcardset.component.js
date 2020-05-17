@@ -23,7 +23,7 @@ export default class CreateFlashcardSet extends Component {
             flashcardSet_category: '',
             
             color: "#ffc600",
-            width: 476,
+            width: 484,
             height: 260,
             brushRadius: 10,
             lazyRadius: 4
@@ -173,6 +173,12 @@ export default class CreateFlashcardSet extends Component {
                 
                 <div className="flashcard-container">
                     <div className="tools-flashcard">
+                    <button
+                                onClick={() => {
+                                this.loadableCanvas.loadSaveData(
+                                localStorage.getItem("savedDrawing")
+                                );
+                                }}>Load</button>  
           <button
             onClick={() => {
               localStorage.setItem(
@@ -266,13 +272,7 @@ export default class CreateFlashcardSet extends Component {
                                 saveData={localStorage.getItem("savedDrawing")}
                             />       
                         </div>
-                        <button
-                                onClick={() => {
-                                this.loadableCanvas.loadSaveData(
-                                localStorage.getItem("savedDrawing")
-                                );
-                                }}        
-                            />  
+                        
                     </div>
                 </div>
                 <div className="submitBar">
