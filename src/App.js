@@ -17,17 +17,22 @@ import Footer from "./components/footer.component";
 class App extends Component {
   render() {
     return (
+      <div>
+        
       <Router>
         <NavBar> </NavBar>
         <br/>
-                <Route path="/" exact component={LandingPage} />
-                <Route path="/list" exact component={FlashcardSetList} />
-                <Route path="/edit/:id" component={EditFlashcardSet} />
-                <Route path="/create" component={CreateFlashcardSet} />
-                <Route path="/signup" component={SignUp} />
-                <Route path="/signin" component={SignIn} />
-                <Footer></Footer>
-      </Router>
+            <Route path="/" exact component={LandingPage} />
+            <Route path="/list" exact component={FlashcardSetList} />
+            <Route path="/edit/:id" component={EditFlashcardSet} />
+            <Route path="/create" component={CreateFlashcardSet} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/signin" component={SignIn} />
+                
+       </Router>
+        <Footer></Footer>
+      
+      </div>
       
     );
   }

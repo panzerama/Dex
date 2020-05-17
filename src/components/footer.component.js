@@ -9,16 +9,14 @@ export default class Footer extends Component{
             <div class = "footer links left"></div>
                <Logo class = "footer-logo"/>
                <div class = "footer-links">
-               <strong>Links</strong> 
-                <body>
-                    <ul>
-                        <li><a href ="/" Home>Home</a></li> 
-                        <li><a href ="/create" Create>Create</a></li> 
-                        <li><a href ="/list" List>List</a></li>
-                        <li><a href ="/search" Search>Search</a></li> 
-                    </ul>
-                </body>
-                
+                <strong>Links</strong> 
+                            <ul>
+                                <li><a href ="/" Home>Home</a></li> 
+                                <li><a href ="/create" Create>Create</a></li> 
+                                <li><a href ="/list" List>List</a></li>
+                                <li><a href ="/search" Search>Search</a></li> 
+                            </ul>
+                        
                </div>
                </div>
                

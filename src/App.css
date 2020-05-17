@@ -121,6 +121,17 @@
       overflow: hidden;
       background-color: #03cc83;
       padding: 0 10%;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      
+    }
+    /*Footer Links*/
+    .footer-links{
+      background-color: #03cc83;
+      margin-left:20px;
+      
+      
     }
 
     /*Footer Logo*/
@@ -128,6 +139,8 @@
       height: 100px;
       padding: 5px;
     }
+
+    
 /* Create New Flashcard Set */
 
 /* Containers */
