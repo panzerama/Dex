@@ -11,6 +11,7 @@ import EditFlashcardSet from "./components/edit-flashcardset.component";
 import FlashcardSetList from "./components/flashcardset-list.component";
 import SignIn from "./components/signup.component";
 import SignUp from "./components/signup.component";
+import Footer from "./components/footer.component";
 
 
 class App extends Component {
@@ -25,7 +26,9 @@ class App extends Component {
                 <Route path="/create" component={CreateFlashcardSet} />
                 <Route path="/signup" component={SignUp} />
                 <Route path="/signin" component={SignIn} />
+                <Footer></Footer>
       </Router>
+      
     );
   }
 }

@@ -114,7 +114,20 @@
       list-style: none;
     }
 
+    /* Footer */
+    .footer-container{
+      display: flex;
+      height: 125px;
+      overflow: hidden;
+      background-color: #03cc83;
+      padding: 0 10%;
+    }
 
+    /*Footer Logo*/
+    .footer-logo {
+      height: 100px;
+      padding: 5px;
+    }
 /* Create New Flashcard Set */
 
 /* Containers */
