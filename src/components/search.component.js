@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-
+//flash card table component
 const SearchResult = props => (
     <tr>
         <td>{props.searchResult.flashcardSet_title}</td>
@@ -18,8 +18,6 @@ const SearchResult = props => (
 //perform search with mongoDB by taking the search value submitted by the user
 export default class SearchPage extends Component{
     
-
-
 //create array for the table of the search results
 constructor(props) {
     super(props);
@@ -34,6 +32,23 @@ searchResultList() {
     })
 }
 
+//do something right when you call the route, change the route name to return different value
+componentDidMount() {
+    axios.get('http://localhost:4000/flashcardSet/search/English')
+        .then(response => {
+            console.log(response.data);
+            this.setState({ searchResult: response.data });
+            console.log("Search Result " + this.searchResult);
+        })
+        .catch(function (error){
+            console.log(error);
+        })
+}
+
+
+//Working on the onSubmit Button to take the input user provide and return a list of the FlashCardSetTitle
+
+/*
 onSubmit(e) {
     e.preventDefault();
 
@@ -53,9 +68,9 @@ onSubmit(e) {
         })
 }
 
+*/
 
-
-
+//working on a button to take user value
 render() {
     return (
         <div>

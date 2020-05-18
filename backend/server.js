@@ -43,7 +43,7 @@ flashcardSetRoutes.route('/:id').get(function(req, res) {
 });
 
 
-//search page component
+//search page component, search the database for that value and return flashcardset with that value
 flashcardSetRoutes.route('/search/:value').get(function(req, res){
     let value = req.params.value;
     FlashcardSet.find({flashcardSet_title: value}, function(err, flashcardSet) {       
